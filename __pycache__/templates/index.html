@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flor de Canela | Bolos Artesanais</title>
+    <style>
+        /* Configurações Gerais e Paleta de Cores */
+        :root {
+            --cor-fundo: #FAF5F0;       /* Creme suave */
+            --cor-principal: #5C3A21;   /* Marrom Canela Escuro */
+            --cor-secundaria: #A0522D;  /* Canela Quente */
+            --cor-acento: #D27D2D;      /* Flor / Laranja Queimado */
+            --cor-texto: #3E2723;       /* Marrom bem escuro para leitura */
+            --branco: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: var(--cor-principal);
+            color: var(--branco);
+            text-align: center;
+            padding: 2.5rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-style: italic;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Banner de Boas-Vindas */
+        .hero {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            text-align: center;
+            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80') center/cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .hero h2 {
+            color: var(--cor-secundaria);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        /* Seção do Cardápio */
+        .cardapio-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .titulo-secao {
+            text-align: center;
+            color: var(--cor-principal);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .titulo-secao::after {
+            content: '✿';
+            display: block;
+            color: var(--cor-acento);
+            font-size: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .bolos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Cards de Bolos */
+        .bolo-card {
+            background-color: var(--branco);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bolo-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .bolo-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .bolo-info {
+            padding: 1.5rem;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .bolo-nome {
+            font-size: 1.3rem;
+            color: var(--cor-principal);
+            margin-bottom: 0.5rem;
+        }
+
+        .bolo-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .bolo-preco {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--cor-secundaria);
+            margin-bottom: 1rem;
+        }
+
+        /* Botão de Compra */
+        .btn-pedir {
+            display: inline-block;
+            background-color: var(--cor-acento);
+            color: var(--branco);
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .btn-pedir:hover {
+            background-color: var(--cor-secundaria);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--cor-principal);
+            color: var(--branco);
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Flor de Canela</h1>
+        <p>Bolos Caseiros & Artesanais com Amor</p>
+    </header>
+
+    <section class="hero">
+        <h2>O verdadeiro sabor do aconchego</h2>
+        <p>Receitas tradicionais feitas com ingredientes selecionados e aquele toque especial de canela que abraça o coração.</p>
+    </section>
+
+    <main class="cardapio-container">
+        <h2 class="titulo-secao">Nossos Bolos Favoritos</h2>
+        
+        <div class="bolos-grid">
+            
+            <div class="bolo-card">
+                <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Bolo de Canela com Maçã" class="bolo-img">
+                <div class="bolo-info">
+                    <div>
+                        <h3 class="bolo-nome">Bolo Especial de Canela</h3>
+                        <p class="bolo-desc">Massa super fofinha com açúcar de canela polvilhado e um toque leve de maçã picada.</p>
+                    </div>
+                    <div>
+                        <div class="bolo-preco">R$ 35,00</div>
+                        <a href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20encomendar%20o%20Bolo%20Especial%20de%20Canela." target="_blank" class="btn-pedir">Pedir no WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bolo-card">
+                <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Bolo de Cenoura com Chocolate" class="bolo-img">
+                <div class="bolo-info">
+                    <div>
+                        <h3 class="bolo-nome">Bolo de Cenoura Premium</h3>
+                        <p class="bolo-desc">O clássico mais amado, com uma cobertura generosa de brigadeiro gourmet artesanal.</p>
+                    </div>
+                    <div>
+                        <div class="bolo-preco">R$ 40,00</div>
+                        <a href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20encomendar%20o%20Bolo%20de%20Cenoura." target="_blank" class="btn-pedir">Pedir no WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bolo-card">
+                <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Bolo Vulcão de Churros" class="bolo-img">
+                <div class="bolo-info">
+                    <div>
+                        <h3 class="bolo-nome">Vulcão de Churros</h3>
+                        <p class="bolo-desc">Massa de canela com uma quantidade absurda de doce de leite cremoso por cima.</p>
+                    </div>
+                    <div>
+                        <div class="bolo-preco">R$ 45,00</div>
+                        <a href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20encomendar%20o%20Bolo%20Vulcão%20de%20Churros." target="_blank" class="btn-pedir">Pedir no WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Flor de Canela - Todos os direitos reservados.</p>
+        <p>📍 Atendemos sob encomenda na sua região | Telefone: (00) 99999-9999</p>
+    </footer>
+
+</body>
+</html>
