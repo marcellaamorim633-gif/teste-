@@ -1,0 +1,26 @@
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.hero {
+    height: 100vh; /* altura da tela inteira */
+    
+    display: flex;
+    justify-content: center; /* centro horizontal */
+    align-items: center;     /* centro vertical */
+}
+
+.hero h1 {
+    text-align: center;
+    background-color: blueviolet;
+}
+
+.mensagem {
+    font-size: 20px;
+}
+
+.botao button {
+    padding: 10px 20px;
+    border-radius: 10px;
+}
