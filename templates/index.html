@@ -1,26 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>Para o meu amor ❤️</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coração de Amor</title>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
 </head>
+
 <body>
 
-    <div class="container">
+<div class="container" id="heart"></div>
 
-        <div class="hero">
-            <h1>Feliz Dia dos Namorados ❤️</h1>
-        </div>
+<script>
+const container = document.getElementById("heart");
 
-        <div class="mensagem">
-            <p>Esse site foi feito especialmente para você.</p>
-        </div>
+for(let t = 0; t < Math.PI * 2; t += 0.08){
 
-        <div class="botao">
-            <button>Abrir Surpresa</button>
-        </div>
+    const x = 16 * Math.pow(Math.sin(t), 3);
+    const y =
+        13 * Math.cos(t) -
+        5 * Math.cos(2 * t) -
+        2 * Math.cos(3 * t) -
+        Math.cos(4 * t);
 
-    </div>
+    const amor = document.createElement("span");
+    amor.className = "amor";
+    amor.innerText = "amor";
+
+    amor.style.left = (250 + x * 15) + "px";
+    amor.style.top = (250 - y * 15) + "px";
+
+    container.appendChild(amor);
+}
+</script>
 
 </body>
 </html>

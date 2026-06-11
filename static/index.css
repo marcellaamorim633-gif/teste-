@@ -1,26 +1,34 @@
-.container {
-    text-align: center;
-    margin-top: 100px;
+body{
+    margin:0;
+    background:#111;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
 }
 
-.hero {
-    height: 100vh; /* altura da tela inteira */
-    
-    display: flex;
-    justify-content: center; /* centro horizontal */
-    align-items: center;     /* centro vertical */
+.container{
+    position:relative;
+    width:500px;
+    height:500px;
 }
 
-.hero h1 {
-    text-align: center;
-    background-color: blueviolet;
+.amor{
+    position:absolute;
+    color:#ff4d6d;
+    font-size:18px;
+    font-family:Arial, sans-serif;
+    font-weight:bold;
+    transform:translate(-50%, -50%);
+    animation:pulsar 2s infinite;
 }
 
-.mensagem {
-    font-size: 20px;
-}
-
-.botao button {
-    padding: 10px 20px;
-    border-radius: 10px;
+@keyframes pulsar{
+    0%,100%{
+        transform:translate(-50%, -50%) scale(1);
+    }
+    50%{
+        transform:translate(-50%, -50%) scale(1.15);
+    }
 }
